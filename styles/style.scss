@@ -2,9 +2,43 @@
 @import "~tailwindcss/components";
 @import "~tailwindcss/utilities";
 
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+}
+
+* {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.highlight-gradient {
+  @apply bg-inherit transition-all ease-in duration-300;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: 2px;
+    background: transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease-in-out;
+    @apply bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-white;
+  }
+  &:focus,
+  &:active,
+  &.active {
+    &:after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 }

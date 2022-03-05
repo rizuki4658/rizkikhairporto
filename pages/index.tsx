@@ -4,7 +4,7 @@ import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
   return (
-    <div className="text-3xl">Test</div>
+    <div>Test</div>
     // <div className={styles.container}>
     //   <Head>
     //     <title>Create Next App</title>
