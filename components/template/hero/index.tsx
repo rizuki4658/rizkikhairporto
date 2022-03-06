@@ -28,8 +28,9 @@ const Hero: React.FC = ({ ...props }) => {
           </p>
           <div className="flex justify-center md:justify-start items-center gap-x-1">
             {
-              socmed.map((item) => (
+              socmed.map((item, key) => (
                 <Button
+                  key={key}
                   icon={item.name}
                   title={item.title}
                   link={item.link}
