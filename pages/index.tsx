@@ -2,10 +2,14 @@ import type { NextPage } from 'next'
 // import Head from 'next/head'
 // import Image from 'next/image'
 import Hero from '../components/template/hero'
+import About from '../components/template/about'
 
 const Home: NextPage = () => {
   return (
-    <Hero />
+    <>
+      <Hero />
+      <About />
+    </>
     // <div className={styles.container}>
     //   <Head>
     //     <title>Create Next App</title>

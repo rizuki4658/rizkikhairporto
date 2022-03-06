@@ -14,3 +14,8 @@ export const socmed: Socmed[] = [
     link: 'https://github.com/rizuki4658'
   }
 ]
+
+export const about = {
+  title: 'Get a closer look at who I am',
+  description: ''
+}

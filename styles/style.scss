@@ -24,6 +24,7 @@
 
 * {
   font-family: 'Open Sans';
+  background-color: #363636;
 }
 
 
@@ -101,6 +102,6 @@ body {
     }
   }
   .mask-icon {
-    @apply bg-gray-400;
+    @apply bg-white;
   }
 }

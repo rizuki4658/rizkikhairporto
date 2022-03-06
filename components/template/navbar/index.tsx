@@ -15,7 +15,7 @@ export default function Navbar() {
             className="bg-primary-gradient rounded-lg h-10 w-10 flex items-center justify-center lg:shadow-lg shadow-gray-800 hover:shadow-none hover:opacity-80 transition-all ease-out duration-300">
             <Link href="/">
               <a
-                className="font-audiowide text-3xl 2xl:text-4xl"
+                className="font-audiowide bg-transparent text-3xl 2xl:text-4xl"
                 title="Rizki Khair">
                 R
               </a>
@@ -28,7 +28,7 @@ export default function Navbar() {
                   <Button
                     link={item.target}
                     title={item.name}
-                    customClass="highlight-gradient font-poppins text-gray-400 hover:text-gray-500">
+                    customClass="highlight-gradient font-poppins text-gray-300 hover:text-white">
                     {item.name}
                   </Button>
                 </li>

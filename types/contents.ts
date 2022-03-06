@@ -4,3 +4,8 @@ export interface Socmed {
   target: string | null;
   link: string | null;
 }
+
+export interface About {
+  title: string | null;
+  description: string | null;
+}
