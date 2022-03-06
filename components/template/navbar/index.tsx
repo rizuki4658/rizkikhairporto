@@ -8,10 +8,19 @@ import Button from '../../common/button'
 
 export default function Navbar() {
   return (
-    <div className="md:fixed z-10 top-0 left-0 right-0 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 xl:px-0 py-2.5">
+    <header className="md:fixed z-30 top-0 left-0 right-0 overflow-hidden ">
+      <div className="max-w-screen-2xl mx-auto px-8 py-2.5">
         <div className="hidden md:flex items-center justify-between gap-x-6 w-full">
-          <div>Logo</div>
+          <div
+            className="bg-primary-gradient rounded-lg h-10 w-10 flex items-center justify-center lg:shadow-lg shadow-gray-800 hover:shadow-none hover:opacity-80 transition-all ease-out duration-300">
+            <Link href="/">
+              <a
+                className="font-audiowide text-3xl 2xl:text-4xl"
+                title="Rizki Khair">
+                R
+              </a>
+            </Link>
+          </div>
           <ul className="flex items-center gap-x-8">
             {
               navigations.map((item: Navigation, key: number) => (
@@ -19,7 +28,7 @@ export default function Navbar() {
                   <Button
                     link={item.target}
                     title={item.name}
-                    customClass="text-md hover:text-gray-500 text-gray-800">
+                    customClass="highlight-gradient font-poppins text-gray-400 hover:text-gray-500">
                     {item.name}
                   </Button>
                 </li>
@@ -28,6 +37,6 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
-    </div>
+    </header>
   )
 }

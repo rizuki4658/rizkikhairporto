@@ -8,5 +8,6 @@ export interface Button {
   text?: boolean | null | undefined;
   onClick?: () => void | undefined;
   link?: string | null | undefined;
-  children: any;
+  children?: any;
+  icon?: string | null | undefined;
 }
