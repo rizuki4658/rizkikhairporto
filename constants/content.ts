@@ -1,4 +1,4 @@
-import { Socmed } from '../types'
+import { About, Socmed, Skill } from '../types'
 
 export const socmed: Socmed[] = [
   {
@@ -15,7 +15,56 @@ export const socmed: Socmed[] = [
   }
 ]
 
-export const about = {
+export const about: About = {
   title: 'Get a closer look at who I am.',
   description: 'I\'m Rizki Khair from Indonesia.<br />I have worked as a front-end developer for almost three years. During my career, I always used Vue as a framework for development but I am familiar too with React.<p class="mt-2.5" />All the skills, tools, and frameworks I use,  are self-taught over many years of practice and expanding my horizons.'
 }
+
+
+export const skills: Skill[] = [
+  {
+    name: 'HTML',
+    value: 90,
+    icon: 'html'
+  },
+  {
+    name: 'CSS',
+    value: 90,
+    icon: 'css'
+  },
+  {
+    name: 'JavaScript',
+    value: 85,
+    icon: 'js'
+  },
+  {
+    name: 'SASS',
+    value: 80,
+    icon: 'sass'
+  },
+  {
+    name: 'VueJs',
+    value: 90,
+    icon: 'vue'
+  },
+  {
+    name: 'ReactJs',
+    value: 75,
+    icon: 'react'
+  },
+  {
+    name: 'NuxtJS',
+    value: 70,
+    icon: 'nuxt'
+  },
+  {
+    name: 'NextJS',
+    value: 60,
+    icon: 'next'
+  },
+  {
+    name: 'TypeScript',
+    value: 80,
+    icon: 'ts'
+  }
+]

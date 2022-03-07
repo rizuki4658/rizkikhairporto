@@ -31,6 +31,19 @@ const MyButton = (props: any) => {
         </a>
       </Link>
     )
+  } else if (props.icon && !props.link) {
+    return(
+      <button
+        title={props.title}
+        className={`btn-icon cursor-pointer rounded-full icon flex items-center justify-center ${props.customClass}`}>
+        <div 
+          style={{
+            WebkitMaskImage: `url('/icons/${props.icon}.svg')`
+          }}
+          className="mask-icon w-2/3 h-2/3"
+        />
+      </button>
+    )
   }
   return (
     <button>{props.children}</button>

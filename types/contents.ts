@@ -9,3 +9,13 @@ export interface About {
   title: string | null;
   description: string | null;
 }
+
+export interface Skill {
+  name: string;
+  value: number;
+  icon?: string;
+}
+
+export interface Skills {
+  skills?: Skill[]
+}
