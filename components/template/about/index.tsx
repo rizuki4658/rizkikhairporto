@@ -24,7 +24,7 @@ const About: React.FC = ({ ...props }) => {
           <Button
             link="#experience"
             customClass="px-12 py-4 rounded-full font-bold h-auto bg-primary-gradient hover:opacity-60">
-            My Experience
+            What can I do?
           </Button>
         </div>
       </div>

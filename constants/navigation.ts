@@ -7,13 +7,13 @@ export const navigations: Navigation[] = [
     active: false
   },
   {
-    name: 'Experience',
-    target: '#experience',
+    name: 'Skills',
+    target: '#skills',
     active: false
   },
   {
-    name: 'Skills',
-    target: '#skills',
+    name: 'Experience',
+    target: '#experience',
     active: false
   },
   {
