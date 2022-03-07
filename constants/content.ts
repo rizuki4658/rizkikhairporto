@@ -1,4 +1,4 @@
-import { About, Socmed, Skill } from '../types'
+import { About, Socmed, Skill, Experience } from '../types'
 
 export const socmed: Socmed[] = [
   {
@@ -66,5 +66,35 @@ export const skills: Skill[] = [
     name: 'TypeScript',
     value: 80,
     icon: 'ts'
+  }
+]
+
+export const experiences: Experience[] = [
+  {
+    name: 'PT. Devixel Teknologi Indonesia',
+    date: {
+      start: '2021-08-01',
+      end: null
+    },
+    link: 'https://id.linkedin.com/company/devixel',
+    image: 'devixel.png'
+  },
+  {
+    name: 'PT. Tradaru Digital Niaga(Popaket)',
+    date: {
+      start: '2021-03-08',
+      end: '2021-07-31'
+    },
+    link: 'https://www.popaket.com/',
+    image: 'popaket.svg'
+  },
+  {
+    name: 'PT. Olsera Indonesia Pratama',
+    date: {
+      start: '2019-08-08',
+      end: '2021-02-20'
+    },
+    link: 'https://www.olsera.com/en/pos',
+    image: 'olsera.svg'
   }
 ]

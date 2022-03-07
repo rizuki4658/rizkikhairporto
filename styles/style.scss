@@ -75,11 +75,28 @@ body {
 .bg-primary-gradient {
   @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white;
 }
+.bg-primary-gradient-hover {
+  &:hover {
+    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white transition-all ease-in-out duration-300;
+  }
+}
+
+.bg-primary-dark {
+  background: #363636;
+}
 
 .text-primary-gradient {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white;
+}
+
+.text-primary-gradient-hover {
+  &:hover {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white;
+  }
 }
 
 .icon {
@@ -103,5 +120,73 @@ body {
   }
   .mask-icon {
     @apply bg-white;
+  }
+}
+
+.filter-image {
+  img {
+    transition: filter .3s ease-in-out;
+    filter: grayscale(90);
+  }
+  &:hover {  
+    img {
+      filter: grayscale(0);
+    }
+  }
+}
+
+.popover {
+  position: relative;
+  .popover-content {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 20px);
+    z-index: 20;
+    opacity: 0;
+    transform: scale(0) translateX(-50%);
+    transition: opacity .3s ease-in-out;
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      width: 0px;
+      height: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #363636;
+    }
+    &.bottom {
+      top: calc(100% + 20px);
+      bottom: unset;
+      &::before {
+        top: -10px;
+        border-bottom: 10px solid;
+        border-top: unset;
+      }
+    }
+    &.bg-primary-dark {
+      @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-lg shadow-gray-700;
+      &::before {
+        @apply border-purple-500;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+    }
+    &.bg-light {
+      @apply bg-gray-100 shadow-lg shadow-gray-800;
+      &::before {
+        border-color: white;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+    }
+  }
+  &:hover {
+    .popover-content {
+      transform: scale(1) translateX(-50%);
+      opacity: 1;
+    }
   }
 }

@@ -19,3 +19,18 @@ export interface Skill {
 export interface Skills {
   skills?: Skill[]
 }
+
+export interface ExperienceDate {
+  start: string | null;
+  end: string | null;
+}
+export interface Experience {
+  name: string;
+  date: ExperienceDate;
+  link: string;
+  image: string;
+}
+
+export interface Experiences {
+  experiences?: Experience[]
+}
