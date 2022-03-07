@@ -35,7 +35,8 @@ const MyButton = (props: any) => {
     return(
       <button
         title={props.title}
-        className={`btn-icon cursor-pointer rounded-full icon flex items-center justify-center ${props.customClass}`}>
+        className={`btn-icon cursor-pointer rounded-full icon flex items-center justify-center ${props.customClass}`}
+        onClick={() => props.onClick() }>
         <div 
           style={{
             WebkitMaskImage: `url('/icons/${props.icon}.svg')`
@@ -51,7 +52,7 @@ const MyButton = (props: any) => {
 }
 
 const Button: React.FC<ButtonTypes> = ({ ...props }) => {
-  const { link, children, title, customClass, icon } = props
+  const { link, children, title, customClass, icon, onClick } = props
   if (link && !icon) {
     return (
       <MyLink

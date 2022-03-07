@@ -13,7 +13,7 @@ const Experience: React.FC<Experiences> = ({ ...props }) => {
   const myExperiences = props.experiences ? props.experiences : experiences
 
   return (
-    <div className="max-w-screen-2xl mx-auto px-8 py-24 min-h-screen">
+    <div className="max-w-screen-2xl mx-auto px-8 py-24">
       <Title>
         Experience
       </Title>

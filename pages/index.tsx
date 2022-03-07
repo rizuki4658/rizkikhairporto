@@ -1,10 +1,12 @@
 import type { NextPage } from 'next'
+import { works } from '../constants'
 // import Head from 'next/head'
 // import Image from 'next/image'
 import Hero from '../components/template/hero'
 import About from '../components/template/about'
 import Skills from '../components/template/skills'
 import Experience from '../components/template/experience'
+import Portofolio from '../components/template/portofolio'
 
 const Home: NextPage = () => {
   return (
@@ -13,6 +15,7 @@ const Home: NextPage = () => {
       <About />
       <Skills />
       <Experience />
+      <Portofolio works={works} />
     </>
     // <div className={styles.container}>
     //   <Head>

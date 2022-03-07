@@ -11,7 +11,7 @@ const Skills: React.FC<SkillsType> = ({ ...props }) => {
   const mySkills = props.skills ? props.skills : skills
 
   return (
-    <div className="max-w-screen-2xl mx-auto px-8 py-24 min-h-screen">
+    <div className="max-w-screen-2xl mx-auto px-8 py-24">
       <Title>
         Skills
       </Title>

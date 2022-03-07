@@ -9,7 +9,7 @@ const About: React.FC = () => {
 
   return (
     <div
-      className="max-w-screen-2xl mx-auto px-8 py-24 min-h-screen">
+      className="max-w-screen-2xl mx-auto px-8 py-24">
       <Title>
         About
       </Title>

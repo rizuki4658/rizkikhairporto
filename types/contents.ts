@@ -34,3 +34,14 @@ export interface Experience {
 export interface Experiences {
   experiences?: Experience[]
 }
+
+export interface Work {
+  name: string;
+  link: string;
+  image: string;
+  description: string;
+}
+
+export interface Works{
+  works: Work[]
+}

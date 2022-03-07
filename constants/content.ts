@@ -1,4 +1,4 @@
-import { About, Socmed, Skill, Experience } from '../types'
+import { About, Socmed, Skill, Experience, Work } from '../types'
 
 export const socmed: Socmed[] = [
   {
@@ -96,5 +96,32 @@ export const experiences: Experience[] = [
     },
     link: 'https://www.olsera.com/en/pos',
     image: 'olsera.svg'
+  }
+]
+
+export const works: Work[] = [
+  {
+    name: 'Zenwel Biz',
+    image: 'zenwel.png',
+    link: 'https://biz.zenwel.com/en',
+    description: 'Zenwel is an innovative product born out of that vision. Now we can help you manage service scheduling and customer appointments more efficiently, manage personnel working hours in an organized manner, serve customers more responsively, manage sales neatly, get detailed operational reporting, and open up opportunities to significantly increase sales.'
+  },
+  {
+    name: 'Popaket',
+    image: 'popaket.png',
+    link: 'https://www.popaket.com/',
+    description: 'Popaket is digital logistics platform that makes it easy for you to send packets with a variety of options courier / cargo. Popaket has partnered with 15+ professional couriers in Indonesia. Our service include Intant, Same Day, Express, Regular, and Cargo delivery.'
+  },
+  {
+    name: 'Sellshark',
+    image: 'sellshark.png',
+    link: 'https://sellshark.com',
+    description: 'Sellshark is a digital platform that makes it easy for you to sell electronic goods such as smartphones, laptops, monitors, and much more. They are more ready for an apple product. But they are accepted too from another brand but not much.<br/>Sellshark is a platform under ItechShark and there are several companies affiliated with ItechShark including <a href="https://buybackengineer.com/" target="_blank" class="text-primary-gradient-hover">Buyback Engineer</a>, <a href="https://sell.gettech.com/" target="_blank" class="text-primary-gradient-hover">Gettech</a>, <a href="https://buybackpros.com/" target="_blank" class="text-primary-gradient-hover">Buyback Pros</a>, and many more. All affiliated companies have the same website or platform like a SellShark with only slight differences in content.'
+  },
+  {
+    name: 'SIKS',
+    image: 'siks.png',
+    link: 'https://siks.anri.sangkuriang.co.id/',
+    description: 'SIKS is plaform from KOMINFO, one of the Indonesian ministries. this platform was created for ANRI in carrying out its duties in the field of archives. The Archived will be digitized so that it is safer and avoids damage due to aging.'
   }
 ]
