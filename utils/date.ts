@@ -66,8 +66,7 @@ const instance = () => ({
   }
 })
 
-const myDates = (date: string | null = null) => {
+export const myDates = (date: string | null = null) => {
   return instance().setDate(date)
 }
 
-export default myDates

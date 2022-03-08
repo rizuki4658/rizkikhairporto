@@ -104,7 +104,7 @@ export const works: Work[] = [
     name: 'Zenwel Biz',
     image: 'zenwel.png',
     link: 'https://biz.zenwel.com/en',
-    description: 'Zenwel is an innovative product born out of that vision. Now we can help you manage service scheduling and customer appointments more efficiently, manage personnel working hours in an organized manner, serve customers more responsively, manage sales neatly, get detailed operational reporting, and open up opportunities to significantly increase sales.'
+    description: 'Zenwel is an innovative product born out of that vision in health and beauty. This platform will let you manage service scheduling and customer appointments more efficiently, manage personnel working hours in an organized manner, serve customers more responsively, manage sales neatly, get detailed operational reporting, and open up opportunities to significantly increase sales.'
   },
   {
     name: 'Popaket',

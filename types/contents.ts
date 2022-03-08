@@ -45,3 +45,13 @@ export interface Work {
 export interface Works{
   works: Work[]
 }
+
+export interface Visitor {
+  name: string;
+  message: string;
+  email: string
+}
+
+export interface User {
+  email: string
+}

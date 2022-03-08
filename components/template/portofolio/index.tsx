@@ -82,6 +82,13 @@ class Portofolio extends React.Component<Works, State> {
               </h3>
               <p dangerouslySetInnerHTML={{ __html }} className="leading-8 py-4" />
             </div>
+            <div className="mt-10 text-center md:text-left">
+              <Button
+                link="#contact"
+                customClass="px-12 py-4 rounded-full font-bold h-auto bg-primary-gradient hover:opacity-60">
+                Get in touch
+              </Button>
+            </div>
           </div>
           <div className="w-full md:flex-1 relative">
             <div style={{ backgroundImage: `url(/porto/porto-shape-one.webp)`}} className="w-full absolute top-0 bottom-0 right-0 left-0 bg-center bg-no-repeat md:bg-cover bg-contain z-0 opacity-5" />

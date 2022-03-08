@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import myDates from '../../../utils/date'
+import { myDates } from '../../../utils'
 import { Experiences, Experience } from '../../../types'
 import { experiences } from '../../../constants'
 
