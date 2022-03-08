@@ -29,55 +29,56 @@ const validating = (key: string, value: any, rules: any) => {
 }
 
 export const useValidator = (rules: any, state: any) => {
+  let formRules: any = {}
+  let extractRules: any = {}
+  for (let key in rules) {
+    const instanceRules = () => ({
+      path: key,
+      errors: [],
+      model: state[key],
+      rule: rules[key],
+      setErrors(arg: any) {
+        // @ts-ignore
+        this.errors = [{...arg}]
+      },
+      inValid() {
+        return this.errors.length ? true : false
+      },
+      validate() {
+        const result = validating(this.path, state, rules)
+        this.setErrors({...result})
+      },
+      reset() {
+        this.errors = []
+        formRules._errors = [...formRules._errors].filter((item: any) => item.property !== this.path)
+      }
+    })
+    extractRules[key] = instanceRules()
+  }
+
   const instanceForm = () => ({
     _errors: [],
-    get errors() {
-      return this._errors
-    },
-    get invalid() {
-      return this.errors.length ? true : false
+    setErrors(arg: any, key: string) {
+      const prev = [...this._errors].find((item: any) => item.property === arg.property)
+      if (!prev) {
+        // @ts-ignore
+        this._errors.push(arg)
+        extractRules[key].errors = [{...arg}]
+      }
     },
     validate() {
-      for (let key in rules) {
+      Object.keys(rules).map((key: any) => {
         const result = validating(key, state[key], rules[key])
-        if (result) {
-          (this as any)._errors.push({...result})
-        }
-      }
+        this.setErrors({...result}, key)
+      })
+    },
+    inValid() {
+      return this._errors.length ? true : false
     },
     reset() {
       this._errors = []
     }
   })
-  const formRules = instanceForm()
-
-  const extractRules: any = {}
-  for (let key in rules) {
-    const instanceRules = () => ({
-      _model: state[key],
-      path: key,
-      _errors: [...formRules._errors].filter((item: any) => item.property === key),
-      get errors() {
-        return this._errors
-      },
-      get invalid() {
-        return this.errors.length ? true : false
-      },
-      get message() {
-        return ''
-      },
-      validate() {
-        const result = validating(key, state[key], rules[key])
-        if (result) {
-          (this as any)._errors.push({...result})
-        }
-      },
-      reset() {
-        this._errors = []
-        formRules._errors = [...formRules._errors].filter((item: any) => item.property !== key)
-      }
-    })
-    extractRules[key] = instanceRules()
-  }
+  formRules = instanceForm()
   return { ...formRules, ...extractRules }
 }

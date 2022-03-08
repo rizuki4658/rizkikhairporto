@@ -11,17 +11,16 @@ interface Input extends React.HTMLProps<HTMLInputElement> {
 }
 
 interface Input {
-  register?: RegisterOptions;
+  register?: RegisterOptions
   formState?: any;
 }
 
-const Input = (props: Input) => {
+const TextArea = (props: Input) => {
   const { register: singleRegister } = useForm()
   let newRegister: any = props.register
   const newError: any = props.formState && props.name ? props.formState.errors[props.name] ? props.message : '' : ''
   const attr = {...props}
   delete attr.register
-
   if (!props.register) {
     newRegister = singleRegister
   }
@@ -36,7 +35,7 @@ const Input = (props: Input) => {
         </label>
       </div>
       <div className="relative bg-gray-800 bg-opacity-30">
-        <input
+        <textarea
           id={`__${props.name}`}
           {...newRegister(props.name, {...attr})}
           className={`my-input ${newError ? 'error' : ''} text-sm`}
@@ -48,4 +47,4 @@ const Input = (props: Input) => {
   )
 }
 
-export default Input
+export default TextArea

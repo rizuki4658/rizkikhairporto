@@ -207,12 +207,33 @@ body {
   }
 }
 
-.my-input {
+input.my-input:-webkit-autofill,
+input.my-input:-webkit-autofill:hover, 
+input.my-input:-webkit-autofill:focus,
+textarea.my-input:-webkit-autofill,
+textarea.my-input:-webkit-autofill:hover,
+textarea.my-input:-webkit-autofill:focus,
+select.my-input:-webkit-autofill,
+select.my-input:-webkit-autofill:hover,
+select.my-input:-webkit-autofill:focus {
+  border: 0;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #1f293750 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.my-input  {
   @apply w-full focus:outline-none focus:border-0 focus:ring-0 bg-transparent px-6 py-2.5;
   &:focus + .my-input-highlight {
     @apply opacity-100 w-2;
   }
+  &.error + .my-input-highlight {
+    @apply opacity-100 w-2 bg-red-500 bg-none;
+  }
 }
 .my-input-highlight {
   @apply absolute left-0 top-0 bottom-0 w-0 opacity-0 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 transition-all ease-in-out duration-300;
+  // &.error {
+  //   @apply absolute left-0 top-0 bottom-0 w-0 opacity-0 bg-red-500 bg-none;
+  // }
 }
