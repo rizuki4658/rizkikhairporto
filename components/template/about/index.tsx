@@ -8,8 +8,8 @@ const About: React.FC = () => {
   const __html: string = about.description ? about.description : ''
 
   return (
-    <div
-      className="max-w-screen-2xl mx-auto px-8 py-24">
+    <section
+      className="max-w-screen-2xl mx-auto px-8 py-24 min-h-screen md:min-h-0">
       <Title>
         About
       </Title>
@@ -29,11 +29,13 @@ const About: React.FC = () => {
             </Button>
           </div>
         </div>
-        <div className="w-full md:flex-1">
-          A
+        <div className="w-full md:flex-1 relative h-96">
+          <div className="w-full absolute top-0 left-0 right-0 bottom-0 flex justify-center md:justify-items-end">
+            <img src="/img/about.png" width="10" height="10" className="w-auto" />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

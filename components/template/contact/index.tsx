@@ -29,7 +29,7 @@ const onSubmit = (data: any) => console.log(data)
 
 const Contact = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto px-8 py-24">
+    <section className="max-w-screen-2xl mx-auto px-8 py-24 min-h-screen md:min-h-0">
       <Title>
         Contact
       </Title>
@@ -46,7 +46,7 @@ const Contact = () => {
           </a>
         </Link>
       </p>
-      <div className="md:w-1/3 w-1/2 mt-16">
+      <div className="md:w-1/3 w-2/3 mt-16">
         <Form onSubmit={onSubmit}>
           <Input {
               ...{
@@ -82,7 +82,7 @@ const Contact = () => {
           </Button>
         </Form>
       </div>
-    </div>
+    </section>
   )
 }
 

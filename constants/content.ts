@@ -12,6 +12,12 @@ export const socmed: Socmed[] = [
     title: 'My Github',
     target: '',
     link: 'https://github.com/rizuki4658'
+  },
+  {
+    name: 'hackerrank',
+    title: 'My Hackerrank',
+    target: '',
+    link: 'https://www.hackerrank.com/rizkikhair4658?hr_r=1'
   }
 ]
 

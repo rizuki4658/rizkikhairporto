@@ -49,7 +49,7 @@ class Portofolio extends React.Component<Works, State> {
     const __html: string = data.description ? data.description : ''
 
     return (
-      <div className="max-w-screen-2xl mx-auto px-8 py-24">
+      <section className="max-w-screen-2xl mx-auto px-8 py-24 min-h-screen md:min-h-0">
         <Title>
           Portofolio
         </Title>
@@ -103,7 +103,7 @@ class Portofolio extends React.Component<Works, State> {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     )
   }
 }
