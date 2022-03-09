@@ -7,6 +7,11 @@ interface LayoutType {
   children?: any
 }
 
+export const getStatic = () => {
+  return ({
+    url: process.env.url
+  })
+}
 
 export default function Layout({statusCode, children}: LayoutType) {
   const code = statusCode ? statusCode.toString().split('') : []
@@ -15,10 +20,23 @@ export default function Layout({statusCode, children}: LayoutType) {
       return (children)
     }
   }
+  const { url } = getStatic()
+  getStatic()
   return (
     <>
       <Head>
         <title>Rizki Khair | Web Front-end Developer</title>
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Hey, I'm Rizki FrontEnd Developer" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content={`${url}/img/share-image.png`} />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@rizkikahir" />
+        <meta name="twitter:creator" content="@rizkikhair" />
+        <meta name="twitter:description" content="Hey, I'm Rizki FrontEnd Developer" />
+        <meta name="twitter:image" content={`${url}/img/share-image.png`} />
       </Head>
       <Navbar />
       <main>
