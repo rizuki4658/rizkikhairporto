@@ -31,6 +31,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: #363636;
+  scroll-behavior: smooth;
 }
 
 .font-montserrat {
@@ -90,7 +91,9 @@ body {
     transition: transform 0.3s ease-in-out;
     @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white transition-all ease-in-out duration-300;
   }
-  &:hover {
+  &:hover,
+  &:focus,
+  &.active {
     &::before {
       transform: scale(1);
     }
@@ -108,7 +111,9 @@ body {
 }
 
 .text-primary-gradient-hover {
-  &:hover {
+  &:hover,
+  &:focus,
+  &.active {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white;
@@ -129,7 +134,9 @@ body {
 }
 
 .btn-icon {
-  &:hover {
+  &:hover,
+  &:focus,
+  &.active {
     .mask-icon {
       @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white transition-all ease-in-out duration-300;
     }
@@ -244,10 +251,19 @@ select.my-input:-webkit-autofill:focus {
   background-size: 100%;
 }
 
+.navbar {
+  top: unset;
+  @apply bottom-0 left-0 right-0;
+}
+
 @media screen and (min-width: 768px) {
   .hero-bg {
     background-image: url('/img/hero.png');
     background-position: center right;
     background-size: 50%;
+  }
+  .navbar {
+    bottom: unset;
+    @apply top-0 left-0 right-0;
   }
 }
