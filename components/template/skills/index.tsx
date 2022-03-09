@@ -42,8 +42,12 @@ const Skills: React.FC<SkillsType> = ({ ...props }) => {
             </Button>
           </div>
         </div>
-        <div className="w-full md:flex-1">
-          A
+        <div className="w-full md:flex-1 md:flex items-center justify-center">
+          <img
+            src="/img/atom-gray.png"
+            width="10"
+            height="10"
+            className="w-1/2 md:block hidden mx-auto" />
         </div>
       </div>
     </div>
