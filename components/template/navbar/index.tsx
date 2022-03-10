@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -9,9 +9,26 @@ import Button from '../../common/button'
 
 export default function Navbar() {
   const { asPath } = useRouter()
+  const [state, setState] = useState({
+    top: 0
+  })
+
+  const onScroll = ((e: any) => {
+    const newTop = e.target.scrollingElement.scrollTop
+    setState((prev) => ({...{top: newTop}}))
+  })
+
+  useEffect(() => {
+    if (state.top > 0) {
+      return
+    }
+    window.removeEventListener('scroll', onScroll, false)
+    return window.addEventListener('scroll', onScroll, false)
+  })
 
   return (
-    <header className="navbar fixed z-30 overflow-x-hidden">
+    <header
+      className={`navbar fixed z-30 overflow-x-hidden ${state.top <= 0 ? 'bg-transparent' : 'bg-black bg-opacity-10'}`}>
       <div className="hidden md:block max-w-screen-2xl mx-auto px-8 py-2.5">
         <div className="hidden md:flex items-center justify-between gap-x-6 w-full">
           <div
