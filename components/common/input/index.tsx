@@ -1,21 +1,8 @@
 import React from 'react'
-import { useForm, RegisterOptions } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
+import { Input as InputType } from '../../../types'
 
-interface Input extends React.HTMLProps<HTMLInputElement> {
-  name?: string;
-  label?: string;
-  maxLength?: number;
-  minLength?: number;
-  required?: boolean;
-  message?: string
-}
-
-interface Input {
-  register?: RegisterOptions;
-  formState?: any;
-}
-
-const Input = (props: Input) => {
+const Input = (props: InputType) => {
   const { register: singleRegister } = useForm()
   let newRegister: any = props.register
   const newError: any = props.formState && props.name ? props.formState.errors[props.name] ? props.message : '' : ''

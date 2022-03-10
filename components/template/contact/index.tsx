@@ -1,11 +1,7 @@
 import React, { FormEvent, useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-// import { user } from '../../../state'
-// import { Visitor, User } from '../../../types'
-import { useForm, SubmitHandler } from 'react-hook-form'
-// import  { useValidator } from '../../../utils'
-// import { VisitorRules } from '../../../rules'
+import { user } from '../../../state'
 
 import Title from '../title'
 import SubTitle from '../subtitle'
@@ -13,18 +9,6 @@ import Input from '../../common/input'
 import Button from '../../common/button'
 import Form from '../../common/form'
 import TextArea from '../../common/textarea'
-
-interface State {
-  name: string;
-  email: string;
-  message: string;
-  // validation: any;
-  // me: User;
-}
-type Inputs = {
-  name: string,
-  // exampleRequired: string,
-};
 
 const onSubmit = (data: any) => console.log(data)
 
@@ -48,7 +32,7 @@ const Contact = () => {
       </div>
       <p className="md:w-1/4 w-2/3 mt-12 font-poppins text-gray-300 content">
         Reach me on social media, by filling out the contact form or by sending an email to
-        <Link href={`mailto:`}>
+        <Link href={`mailto:${user.email}`}>
           <a className="text-primary-gradient-hover">
             &nbsp;rizkikhair4658@.gmail.com
           </a>

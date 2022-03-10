@@ -1,12 +1,8 @@
 import React from 'react';
+import { LayoutType } from '../../../types'
 import Navbar from '../navbar'
 import Footer from '../footer'
 import Head from 'next/head'
-
-interface LayoutType {
-  statusCode?: number;
-  children?: any
-}
 
 export const getStatic = () => {
   return ({

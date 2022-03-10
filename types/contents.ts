@@ -56,3 +56,15 @@ export interface Visitor {
 export interface User {
   email: string
 }
+
+export interface LayoutType {
+  statusCode?: number;
+  children?: any
+}
+
+export interface PortofolioState {
+  start: number;
+  selected: number;
+  limit: number;
+  isActive: boolean | string
+}

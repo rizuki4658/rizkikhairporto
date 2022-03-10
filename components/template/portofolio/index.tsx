@@ -1,17 +1,11 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
-import { Works, Work } from '../../../types'
+import { Works, Work, PortofolioState as State } from '../../../types'
 
 import Title from '../title'
 import SubTitle from '../subtitle'
 import Button from '../../common/button'
 
-interface State {
-  start: number;
-  selected: number;
-  limit: number;
-  isActive: boolean | string
-}
 
 const updatingState = (
     up: boolean,
