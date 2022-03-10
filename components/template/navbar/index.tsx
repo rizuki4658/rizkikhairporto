@@ -1,5 +1,5 @@
-import Head from 'next/head'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { navigations } from '../../../constants'
 import { Navigation } from '../../../types'
@@ -7,13 +7,15 @@ import { Navigation } from '../../../types'
 import Button from '../../common/button'
 
 export default function Navbar() {
+  const { asPath } = useRouter()
+
   return (
-    <header className="navbar fixed z-30 overflow-hidden">
+    <header className="navbar fixed z-30 overflow-x-hidden">
       <div className="hidden md:block max-w-screen-2xl mx-auto px-8 py-2.5">
         <div className="hidden md:flex items-center justify-between gap-x-6 w-full">
           <div
             className="bg-primary-gradient rounded-lg h-10 w-10 flex items-center justify-center lg:shadow-lg shadow-gray-800 hover:shadow-none hover:opacity-80 transition-all ease-out duration-300">
-            <Link href="/">
+            <Link href="/" scroll={true}>
               <a
                 className="font-audiowide bg-transparent text-3xl 2xl:text-4xl"
                 title="Rizki Khair">
@@ -28,7 +30,8 @@ export default function Navbar() {
                   <Button
                     link={item.target}
                     title={item.name}
-                    customClass="highlight-gradient font-poppins text-gray-300 hover:text-white">
+                    scroll={true}
+                    customClass={`highlight-gradient ${asPath.includes(item.target) ? 'active' : '' } font-poppins text-gray-300 hover:text-white`}>
                     {item.name}
                   </Button>
                 </li>

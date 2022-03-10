@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 import { Skills as SkillsType, Skill } from '../../../types'
 import { skills } from '../../../constants'
 
@@ -8,14 +9,20 @@ import Button from '../../common/button'
 import Progress from '../../common/progress'
 
 const Skills: React.FC<SkillsType> = ({ ...props }) => {
+  const { asPath } = useRouter()
+  const isActive = asPath.includes('skills') ? true : false
   const mySkills = props.skills ? props.skills : skills
 
   return (
-    <div className="max-w-screen-2xl mx-auto px-8 py-24 min-h-screen md:min-h-0">
-      <Title>
-        Skills
-      </Title>
-      <SubTitle>Self-taught and experience skills.</SubTitle>
+    <section
+      id="skills"
+      className={`${isActive ? 'skills-animation' : ''} max-w-screen-2xl mx-auto px-8 py-24 min-h-screen md:min-h-0`}>
+      <div className="title">
+        <Title>
+          Skills
+        </Title>
+        <SubTitle>Self-taught and experience skills.</SubTitle>
+      </div>
 
       <div
         className="mt-16 text-base text-gray-300 font-montserrat flex flex-wrap-reverse md:flex-nowrap gap-10">
@@ -28,9 +35,10 @@ const Skills: React.FC<SkillsType> = ({ ...props }) => {
               mySkills.map((item: Skill, key: number) => (
                 <Progress
                   key={key}
-                  value={item.value}
+                  value={ isActive ? item.value : 0}
                   name={item.name}
-                  icon={item.icon} />
+                  icon={item.icon}
+                  customClass="progress" />
               ))
             }
           </div>
@@ -47,10 +55,10 @@ const Skills: React.FC<SkillsType> = ({ ...props }) => {
             src="/img/atom-gray.png"
             width="10"
             height="10"
-            className="w-1/2 md:block hidden mx-auto" />
+            className="w-1/2 md:block hidden mx-auto image" />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

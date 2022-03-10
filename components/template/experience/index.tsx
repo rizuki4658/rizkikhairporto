@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import  { useRouter } from 'next/router'
 import { myDates } from '../../../utils'
 import { Experiences, Experience } from '../../../types'
 import { experiences } from '../../../constants'
@@ -10,14 +11,20 @@ import Popover from '../../common/popover'
 import Button from '../../common/button'
 
 const Experience: React.FC<Experiences> = ({ ...props }) => {
+  const { asPath } = useRouter()
+  const isActive = asPath.includes('experience') ? true : false
   const myExperiences = props.experiences ? props.experiences : experiences
 
   return (
-    <div className="max-w-screen-2xl mx-auto px-8 py-24">
-      <Title>
-        Experience
-      </Title>
-      <SubTitle>My career journey, so far</SubTitle>
+    <div
+      id="experience"
+      className={`${isActive ? 'experience-animation' : ''} max-w-screen-2xl md:min-h-0 min-h-screen mx-auto px-8 py-24`}>
+      <div className="title">
+        <Title>
+          Experience
+        </Title>
+        <SubTitle>My career journey, so far</SubTitle>
+      </div>
 
       <div className="md:w-11/12 mx-auto px-4 mt-24">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 justify-center">
@@ -36,7 +43,7 @@ const Experience: React.FC<Experiences> = ({ ...props }) => {
               return (
                 <div
                   key={key}
-                  className="filter-image shadow-lg border-t border-black border-opacity-5 px-6 py-6 rounded-xl flex flex-warap items-center">
+                  className="filter-image shadow-lg border-t border-black border-opacity-5 px-6 py-6 rounded-xl flex flex-warap items-center company">
                   <div className="w-full">
                     <div className="flex items-center justify-between gap-3">
                       <img
@@ -72,7 +79,7 @@ const Experience: React.FC<Experiences> = ({ ...props }) => {
           }
         </div>
       </div>
-      <div className="mt-20 text-center">
+      <div className="mt-20 text-center button">
         <Button
           link="#portofolio"
           customClass="px-12 py-4 rounded-full font-bold h-auto bg-primary-gradient hover:opacity-60">

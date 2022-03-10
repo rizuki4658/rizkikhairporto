@@ -14,6 +14,7 @@ export interface Skill {
   name: string;
   value: number;
   icon?: string;
+  customClass?: string;
 }
 
 export interface Skills {

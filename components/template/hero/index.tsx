@@ -1,12 +1,15 @@
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { socmed } from '../../../constants'
 
 import Button from '../../common/button'
 
 const Hero: React.FC = ({ ...props }) => {
+  const { asPath } = useRouter()
+  const isActive = asPath === '/' || asPath === '' ? true : false
   return (
-    <section id="hero" className="relative max-w-screen-2xl mx-auto md:pt-24">
+    <section id="home" className="relative max-w-screen-2xl mx-auto md:pt-24">
       <div
         className="fixed md:hidden left-4 top-4 bg-primary-gradient rounded-lg h-10 w-10 flex items-center justify-center lg:shadow-lg shadow-gray-800 hover:shadow-none hover:opacity-80 transition-all ease-out duration-300">
         <Link href="/">
@@ -18,7 +21,7 @@ const Hero: React.FC = ({ ...props }) => {
         </Link>
       </div>
       <div className="px-8 min-h-screen lg:min-h-0 hero-bg flex items-center justify-center md:block md:py-24">
-        <div className="h-96 pt-10 md:pt-0">
+        <div className={`h-96 pt-10 md:pt-0 ${isActive ? 'home-animation' : ''} `}>
           <div className="space-y-6 md:text-left text-center">
             <h1 className="md:text-3xl lg:text-4xl text-2xl font-poppins font-semibold text-gray-300">
               Hey, I'm <span className="font-bold font-montserrat text-white">Rizki</span>

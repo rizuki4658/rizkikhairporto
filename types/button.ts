@@ -10,4 +10,5 @@ export interface Button {
   link?: string | null | undefined;
   children?: any;
   icon?: string | null | undefined;
+  scroll?: boolean
 }

@@ -5,7 +5,7 @@ import Button from '../button'
 
 const Progress: React.FC<Skill> = ({ ...props }) => {
   return (
-    <div className="font-montserrat my-1.5 flex items-start gap-x-4">
+    <div className={`font-montserrat my-1.5 flex items-start gap-x-4 ${props.customClass}`}>
       <div className="flex-1">
         <span className="text-xs">{ props.name }</span>
         <div className="bg-gray-400 bg-opacity-10 h-1.5 rounded">

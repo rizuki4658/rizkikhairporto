@@ -1,0 +1,192 @@
+
+.home-animation {
+  margin-left: -200px;
+  opacity: 0;
+  animation: fadeLeft 1s forwards .3s;
+}
+
+.about-animation {
+  .title {
+    margin-left: -200px;
+    opacity: 0;
+    animation: fadeLeft 1s forwards .3s;
+  }
+  .description {
+    opacity: 0;
+    animation: fade 1s forwards .3s;
+  }
+  .image {
+    margin-bottom: -100px;
+    opacity: 0;
+    animation: fadeBottom 1s forwards .3s;
+  }
+}
+
+.skills-animation {
+  .title {
+    margin-left: -200px;
+    opacity: 0;
+    animation: fadeLeft 1s forwards .3s;
+  }
+  .progress {
+    opacity: 0;
+    animation: fade 1s forwards .3s;
+    .bg-primary-gradient {
+      transition: all 1s ease-in-out .5s;
+    }
+  }
+  .image {
+    opacity: 0;
+    margin-bottom: -100px;
+    animation: fadeBottom 1s forwards .3s;
+  }
+}
+
+.experience-animation {
+  .title {
+    margin-left: -200px;
+    opacity: 0;
+    animation: fadeLeft 1s forwards .3s;
+  }
+  .company {
+    &:nth-child(1) {
+      transform: scale(.5);
+      opacity: 0;
+      animation: fadeSize 1s forwards .5s
+    }
+    &:nth-child(2) {
+      transform: scale(.5);
+      opacity: 0;
+      animation: fadeSize 1s forwards 1s
+    }
+    &:nth-child(3) {
+      transform: scale(.5);
+      opacity: 0;
+      animation: fadeSize 1s forwards 1.5s
+    }
+  }
+  .button {
+    opacity: 0;
+    animation: fade 1s forwards 1s;
+  }
+}
+
+.portofolio-animation {
+  .title {
+    margin-left: -200px;
+    opacity: 0;
+    animation: fadeLeft 1s forwards .3s;
+  }
+  .content {
+    margin-bottom: -100px;
+    opacity: 0;
+    animation: fadeBottom 1s forwards .5s;
+  }
+}
+
+.carousel {
+  .carousel__content {
+    margin-top: -100px;
+    opacity: 0;
+    animation: carouselContent .5s forwards;
+  }
+  .carousel__image {
+    transform: translate(-100px);
+    opacity: 0;
+    animation: carouselImage .5s forwards .3s;
+  }
+}
+
+.contact-animation {
+  .title {
+    margin-left: -200px;
+    opacity: 0;
+    animation: fadeLeft 1s forwards .3s;
+  }
+  .content {
+    opacity: 0;
+    animation: fade 1s forwards 1.3s;
+  }
+  .form {
+    margin-bottom: -100px;
+    opacity: 0;
+    animation: fadeBottom 1s forwards 1.6s;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeLeft {
+  from {
+    margin-left: -200px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    margin-left: 0;
+  }
+}
+
+
+@keyframes fadeRight {
+  from {
+    margin-right: -200px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    margin-right: 0;
+  }
+}
+
+@keyframes fadeBottom {
+  from {
+    margin-bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    margin-bottom: 0;
+  }
+}
+
+@keyframes fadeSize {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes carouselContent {
+  from {
+    margin-top: -100px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+
+@keyframes carouselImage {
+  from {
+    transform: translate(-100px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}

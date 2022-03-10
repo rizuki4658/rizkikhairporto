@@ -1,5 +1,6 @@
 import React, { FormEvent, useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 // import { user } from '../../../state'
 // import { Visitor, User } from '../../../types'
 import { useForm, SubmitHandler } from 'react-hook-form'
@@ -28,17 +29,24 @@ type Inputs = {
 const onSubmit = (data: any) => console.log(data)
 
 const Contact = () => {
+  const { asPath } = useRouter()
+  const isActive = asPath.includes('contact') ? true : false
+
   return (
-    <section className="max-w-screen-2xl mx-auto px-8 py-24 min-h-screen md:min-h-0">
-      <Title>
-        Contact
-      </Title>
-      <SubTitle>
-        <div className="font-poppins md:w-1/2 w-4/5">
-          Interested in working with me or maybe just talk?
-        </div> 
-      </SubTitle>
-      <p className="md:w-1/4 w-2/3 mt-12 font-poppins text-gray-300">
+    <section
+      id="contact"
+      className={`${isActive ? 'contact-animation' : ''} max-w-screen-2xl mx-auto px-8 py-24 min-h-screen md:min-h-0`}>  
+      <div className="title">
+        <Title>
+          Contact
+        </Title>
+        <SubTitle>
+          <div className="font-poppins md:w-1/2 w-4/5">
+            Interested in working with me or maybe just talk?
+          </div> 
+        </SubTitle>
+      </div>
+      <p className="md:w-1/4 w-2/3 mt-12 font-poppins text-gray-300 content">
         Reach me on social media, by filling out the contact form or by sending an email to
         <Link href={`mailto:`}>
           <a className="text-primary-gradient-hover">
@@ -46,7 +54,7 @@ const Contact = () => {
           </a>
         </Link>
       </p>
-      <div className="md:w-1/3 w-2/3 mt-16">
+      <div className="md:w-1/3 w-2/3 mt-16 form">
         <Form onSubmit={onSubmit}>
           <Input {
               ...{

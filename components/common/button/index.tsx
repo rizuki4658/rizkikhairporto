@@ -4,7 +4,9 @@ import { Button as ButtonTypes } from '../../../types'
 
 const MyLink = (props: any) => {
   return (
-    <Link href={props.link}>
+    <Link
+      href={props.link} 
+      scroll={props.scroll}>
       <button
         title={props.title}
         className={`rounded-sm h-11 px-2 ${props.customClass}`}>
@@ -56,13 +58,14 @@ const MyButton = (props: any) => {
 }
 
 const Button: React.FC<ButtonTypes> = ({ ...props }) => {
-  const { link, children, title, customClass, icon, onClick } = props
+  const { link, children, title, customClass, icon, onClick, scroll } = props
   if (link && !icon) {
     return (
       <MyLink
         link={link}
         label={children}
         title={title}
+        scroll={scroll}
         customClass={customClass} />
     )
   }
