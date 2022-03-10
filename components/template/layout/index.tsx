@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import { useRouter } from 'next/router'
 import { LayoutType } from '../../../types'
 import Navbar from '../navbar'
 import Footer from '../footer'
@@ -11,6 +12,10 @@ export const getStatic = () => {
 }
 
 const Layout: React.FC = ({statusCode, children}: LayoutType) => {
+  const router = useRouter()
+  const isSetting = router.asPath.includes('settings')
+  const isForm = router.asPath.includes('form')
+
   const code = statusCode ? statusCode.toString().split('') : []
   if (code.length) {
     if (code[0].includes('4') || code[0].includes('5')) {
@@ -18,6 +23,19 @@ const Layout: React.FC = ({statusCode, children}: LayoutType) => {
     }
   }
   const { url } = getStatic()
+
+  const checkRoute = () => {
+    if (!isSetting && !isForm) return (
+      <>
+        <Navbar />
+          <main>
+          { children }
+        </main>
+        <Footer />
+      </>
+    )
+    return children
+  }
 
   getStatic()
     return (
@@ -36,11 +54,7 @@ const Layout: React.FC = ({statusCode, children}: LayoutType) => {
           <meta name="twitter:description" content="Hey, I'm Rizki FrontEnd Developer" />
           <meta name="twitter:image" content={`${url}/img/share-image.png`} />
         </Head>
-        <Navbar />
-        <main>
-          { children }
-        </main>
-        <Footer />
+        { checkRoute() }
       </>
     )
 }

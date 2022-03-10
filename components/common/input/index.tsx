@@ -25,6 +25,7 @@ const Input = (props: InputType) => {
       <div className="relative bg-gray-800 bg-opacity-30">
         <input
           id={`__${props.name}`}
+          type={props.type ? props.type : 'text'}
           {...newRegister(props.name, {...attr})}
           className={`my-input ${newError ? 'error' : ''} text-sm`}
         />

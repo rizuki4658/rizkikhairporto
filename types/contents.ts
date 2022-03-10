@@ -54,7 +54,14 @@ export interface Visitor {
 }
 
 export interface User {
-  email: string
+  email: string;
+  username: string;
+  password: string;
+  about: About;
+  works: Work[];
+  skills: Skill[];
+  experiences: Experience[];
+  socmed: Socmed[];
 }
 
 export interface LayoutType {
