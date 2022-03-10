@@ -52,7 +52,7 @@ const Portofolio: React.FC<Works> = ({...props}: Works) => {
           Portofolio
         </Title>
         <SubTitle>
-          Preview of what I've been working
+          Preview of what I&apos;ve been working
         </SubTitle>
       </div>
       <div
@@ -79,7 +79,7 @@ const Portofolio: React.FC<Works> = ({...props}: Works) => {
             data.map((item: Work, key: number) => {
               if (key === porto.selected) {
                 return (
-                  <div className="carousel__content">
+                  <div key={key} className="carousel__content">
                     <h3 className="md:text-4xl lg:text-5xl text-3xl font-poppins font-semibold text-gray-200">
                       {item.name}
                     </h3>
@@ -94,7 +94,7 @@ const Portofolio: React.FC<Works> = ({...props}: Works) => {
           data.map((item: Work, key: number) => {
             if (key === porto.selected) {
               return (
-                <div className="w-full md:flex-1 relative carousel__image">
+                <div key={key} className="w-full md:flex-1 relative carousel__image">
                   <div style={{ backgroundImage: `url(/porto/porto-shape-one.webp)`}} className="w-full absolute top-0 bottom-0 right-0 left-0 bg-center bg-no-repeat md:bg-cover bg-contain z-0 opacity-5" />
                   <div className="md:absolute relative z-10 top-0 left-0 right-0 bottom-0 flex items-center justify-center">
                     <img

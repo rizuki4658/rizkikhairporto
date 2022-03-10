@@ -37,7 +37,12 @@ const About: React.FC = () => {
         </div>
         <div className="w-full md:flex-1 relative h-96">
           <div className="w-full absolute top-0 left-0 right-0 bottom-0 image flex justify-center md:justify-items-end">
-            <img src="/img/about.png" width="10" height="10" className="w-auto" />
+            <img
+              src="/img/about.png"
+              alt="about me"
+              width="10"
+              height="10"
+              className="w-auto" />
           </div>
         </div>
       </div>

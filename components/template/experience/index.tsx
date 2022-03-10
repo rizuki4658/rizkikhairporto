@@ -1,8 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import  { useRouter } from 'next/router'
 import { myDates } from '../../../utils'
-import { Experiences, Experience } from '../../../types'
+import { Experiences as ExperiencesType, Experience as ExperienceType } from '../../../types'
 import { experiences } from '../../../constants'
 
 import Title from '../title'
@@ -10,7 +11,7 @@ import SubTitle from '../subtitle'
 import Popover from '../../common/popover'
 import Button from '../../common/button'
 
-const Experience: React.FC<Experiences> = ({ ...props }) => {
+const Experience: React.FC<ExperiencesType> = ({ ...props }) => {
   const { asPath } = useRouter()
   const isActive = asPath.includes('experience') ? true : false
   const myExperiences = props.experiences ? props.experiences : experiences
@@ -29,7 +30,7 @@ const Experience: React.FC<Experiences> = ({ ...props }) => {
       <div className="md:w-11/12 mx-auto px-4 mt-24">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 justify-center">
           {
-            myExperiences.map((item: Experience, key: number) => {
+            myExperiences.map((item: ExperienceType, key: number) => {
               const help = () => {
                 if (key === 0) {
                   return (
@@ -46,7 +47,7 @@ const Experience: React.FC<Experiences> = ({ ...props }) => {
                   className="filter-image shadow-lg border-t border-black border-opacity-5 px-6 py-6 rounded-xl flex flex-warap items-center company">
                   <div className="w-full">
                     <div className="flex items-center justify-between gap-3">
-                      <img
+                      <Image
                         src={`/company/${item.image}`}
                         alt="Picture of the author"
                         width={ item.image.includes('.svg') ? 140 : 60}

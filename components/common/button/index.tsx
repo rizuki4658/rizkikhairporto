@@ -6,7 +6,8 @@ const MyLink = (props: any) => {
   return (
     <Link
       href={props.link} 
-      scroll={props.scroll}>
+      scroll={props.scroll}
+      passHref>
       <button
         title={props.title}
         className={`rounded-sm h-11 px-2 ${props.customClass}`}>
@@ -58,7 +59,7 @@ const MyButton = (props: any) => {
 }
 
 const Button: React.FC<ButtonTypes> = ({ ...props }) => {
-  const { link, children, title, customClass, icon, onClick, scroll } = props
+  const { link, children, title, customClass, icon, scroll } = props
   if (link && !icon) {
     return (
       <MyLink

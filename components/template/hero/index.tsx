@@ -24,7 +24,7 @@ const Hero: React.FC = ({ ...props }) => {
         <div className={`h-96 pt-10 md:pt-0 ${isActive ? 'home-animation' : ''} `}>
           <div className="space-y-6 md:text-left text-center">
             <h1 className="md:text-3xl lg:text-4xl text-2xl font-poppins font-semibold text-gray-300">
-              Hey, I'm <span className="font-bold font-montserrat text-white">Rizki</span>
+              Hey, I&apos;m <span className="font-bold font-montserrat text-white">Rizki</span>
             </h1>
             <h2 className="md:text-4xl lg:text-5xl text-3xl font-poppins font-extrabold text-white">
               FrontEnd Developer

@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -31,7 +32,7 @@ export default function Navbar() {
                     link={item.target}
                     title={item.name}
                     scroll={true}
-                    customClass={`highlight-gradient ${asPath.includes(item.target) ? 'active' : '' } font-poppins text-gray-300 hover:text-white`}>
+                    customClass={`font-poppins text-gray-300 hover:text-white highlight-gradient ${asPath.includes(item.target) ? 'active' : '' }`}>
                     {item.name}
                   </Button>
                 </li>
