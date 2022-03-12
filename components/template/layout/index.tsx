@@ -15,17 +15,12 @@ const Layout: React.FC = ({statusCode, children}: LayoutType) => {
   const router = useRouter()
   const isSetting = router.asPath.includes('settings')
   const isForm = router.asPath.includes('form')
+  const isError = router.pathname.includes('404')
 
-  const code = statusCode ? statusCode.toString().split('') : []
-  if (code.length) {
-    if (code[0].includes('4') || code[0].includes('5')) {
-      return (children)
-    }
-  }
   const { url } = getStatic()
 
   const checkRoute = () => {
-    if (!isSetting && !isForm) return (
+    if (!isSetting && !isForm && !isError) return (
       <>
         <Navbar />
           <main>
