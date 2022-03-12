@@ -10,7 +10,7 @@ const MyLink = (props: any) => {
       passHref>
       <button
         title={props.title}
-        className={`rounded-sm h-11 px-2 ${props.customClass}`}>
+        className={`${props.customClass}`}>
         {props.label}
       </button>
     </Link>

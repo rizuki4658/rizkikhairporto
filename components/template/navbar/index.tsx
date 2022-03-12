@@ -49,7 +49,7 @@ export default function Navbar() {
                     link={item.target}
                     title={item.name}
                     scroll={true}
-                    customClass={`font-poppins text-gray-300 hover:text-white highlight-gradient ${asPath.includes(item.target) ? 'active' : '' }`}>
+                    customClass={`h-11 px-2 font-poppins text-gray-300 hover:text-white highlight-gradient ${asPath.includes(item.target) ? 'active' : '' }`}>
                     {item.name}
                   </Button>
                 </li>
