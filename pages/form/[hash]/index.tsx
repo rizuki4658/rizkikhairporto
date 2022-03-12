@@ -95,7 +95,7 @@ const SettingsForm: React.FC = () => {
             ))
           }
           <div>  
-            <Link href={'/download'} passHref>
+            <Link href={'/downloads'} passHref>
               <a
                 target="_blank"
                 className="bg-primary-gradient block text-center py-2.5 rounded-lg hover:opacity-50 mt-6">

@@ -157,6 +157,12 @@ body {
       filter: grayscale(0);
     }
   }
+  &.keep {
+    img {
+      transition: filter .3s ease-in-out;
+      filter: grayscale(90);
+    }
+  }
 }
 
 .popover {
@@ -269,3 +275,6 @@ select.my-input:-webkit-autofill:focus {
   }
 }
 
+.pdf {
+  max-width: 1368px;
+}

@@ -3,6 +3,7 @@ export interface Socmed {
   title: string | null;
   target: string | null;
   link: string | null;
+  text?: string | null;
 }
 
 export interface About {
@@ -30,6 +31,7 @@ export interface Experience {
   date: ExperienceDate;
   link: string;
   image: string;
+  description?: string
 }
 
 export interface Experiences {

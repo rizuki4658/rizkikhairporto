@@ -16,11 +16,12 @@ const Layout: React.FC = ({statusCode, children}: LayoutType) => {
   const isSetting = router.asPath.includes('settings')
   const isForm = router.asPath.includes('form')
   const isError = router.pathname.includes('404')
+  const isDownload = router.pathname.includes('downloads')
 
   const { url } = getStatic()
 
   const checkRoute = () => {
-    if (!isSetting && !isForm && !isError) return (
+    if (!isSetting && !isForm && !isError && !isDownload) return (
       <>
         <Navbar />
           <main>

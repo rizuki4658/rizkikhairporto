@@ -19,7 +19,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className={`${isActive ? 'contact-animation' : ''} max-w-screen-2xl mx-auto px-8 py-24 min-h-screen md:min-h-0`}>  
+      className={`${isActive ? 'contact-animation' : ''} max-w-screen-2xl mx-auto px-8 py-24 min-h-screen md:min-h-0 relative`}>  
       <div className="title">
         <Title>
           Contact
@@ -73,6 +73,13 @@ const Contact = () => {
             Send message
           </Button>
         </Form>
+      </div>
+      <div className="absolute bottom-8 right-10">
+        <Button
+          link="/downloads"
+          customClass="px-10 py-2 rounded-full font-bold h-auto bg-primary-gradient hover:opacity-60">
+          Get CV
+        </Button>
       </div>
     </section>
   )

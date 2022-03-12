@@ -5,19 +5,22 @@ export const socmed: Socmed[] = [
     name: 'linkedin',
     title: 'My LinkedIn',
     target: '',
-    link: 'https://www.linkedin.com/in/rizki-khair-0b5a67186/'
+    link: 'https://www.linkedin.com/in/rizki-khair-0b5a67186/',
+    text: 'rizki khair'
   },
   {
     name: 'github',
     title: 'My Github',
     target: '',
-    link: 'https://github.com/rizuki4658'
+    link: 'https://github.com/rizuki4658',
+    text: 'rizuki4658'
   },
   {
     name: 'hackerrank',
     title: 'My Hackerrank',
     target: '',
-    link: 'https://www.hackerrank.com/rizkikhair4658?hr_r=1'
+    link: 'https://www.hackerrank.com/rizkikhair4658?hr_r=1',
+    text: 'rizkikhair4658'
   }
 ]
 
@@ -83,7 +86,8 @@ export const experiences: Experience[] = [
       end: null
     },
     link: 'https://id.linkedin.com/company/devixel',
-    image: 'devixel.png'
+    image: 'devixel.png',
+    description: 'My responsibilities in this company are the same as in previous companies I worked for, however, here I am more focused on handling bugs and I have gained experience with using the Vue framework version 3 and some other new things such as the use of the ViteJs compiler.'
   },
   {
     name: 'PT. Tradaru Digital Niaga(Popaket)',
@@ -92,7 +96,8 @@ export const experiences: Experience[] = [
       end: '2021-07-31'
     },
     link: 'https://www.popaket.com/',
-    image: 'popaket.svg'
+    image: 'popaket.svg',
+    description: 'My responsibility in this company is to implement designs that have been done by the UI team, then create, test, and optimize UI/UX products, this includes product compatibility and functionality. The important experience that I got from my current job desk is to know more about the git command line and how to optimize the use of git for work efficiency, then I know how to use Nuxt.js and last now I know what is meant of TypeScript.'
   },
   {
     name: 'PT. Olsera Indonesia Pratama',
@@ -101,7 +106,8 @@ export const experiences: Experience[] = [
       end: '2021-02-20'
     },
     link: 'https://www.olsera.com/en/pos',
-    image: 'olsera.svg'
+    image: 'olsera.svg',
+    description: 'As a front end developer, my job is to make the appearance of the website looks good and matches the design from the UI / UX team, ensuring the website looks neat when cross-browser. To handling my job and make it easier, I use nodes js as a programming language from the server-side, Vue Js framework to help make websites more interactive, and additional packages for appropriate to the design.'
   }
 ]
 
