@@ -20,7 +20,7 @@ export const Skills = () => {
           <div className="grid grid-cols-3">
             {
               mySkills.map((item: any, key: number) => (
-                <div className="px-2">
+                <div key={key} className="px-2">
                   <div className="font-montserrat my-1.5 flex items-start gap-x-4">
                     <div className="flex-1">
                       <span className="text-xs text-gray-600">{ item.name }</span>
