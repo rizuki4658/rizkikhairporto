@@ -58,7 +58,7 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
-      <div className="block md:hidden bg-primary-dark border-t border-gray-400 border-opacity-25">
+      <div className="block z-30 md:hidden bg-primary-dark border-t border-gray-400 border-opacity-25">
         <div className="max-w-screen-2xl mx-auto">
           <ul className="flex w-full items-center">
             {
