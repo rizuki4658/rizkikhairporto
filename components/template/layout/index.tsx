@@ -41,7 +41,7 @@ const Layout: React.FC = ({statusCode, children}: LayoutType) => {
           <meta property="og:url" content={url} />
           <meta property="og:type" content="website" />
           <meta property="og:title" content="Hey, I'm Rizki FrontEnd Developer" />
-          <meta property="og:description" content="" />
+          <meta property="og:description" content="Almost 3 years as developer and I'm selft-taught frontend developer" />
           <meta property="og:image" content={`${url}/img/share-image.png`} />
 
           <meta name="twitter:card" content="summary" />
