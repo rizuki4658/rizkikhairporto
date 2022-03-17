@@ -11,7 +11,7 @@ const Hero: React.FC = ({ ...props }) => {
   return (
     <section id="home" className="relative max-w-screen-2xl mx-auto md:pt-24">
       <div
-        className="fixed md:hidden left-4 top-4 bg-primary-gradient rounded-lg h-10 w-10 flex items-center justify-center lg:shadow-lg shadow-gray-800 hover:shadow-none hover:opacity-80 transition-all ease-out duration-300">
+        className="fixed z-50 md:hidden left-4 top-4 bg-primary-gradient rounded-lg h-10 w-10 flex items-center justify-center lg:shadow-lg shadow-gray-800 hover:shadow-none hover:opacity-80 transition-all ease-out duration-300">
         <Link href="/">
           <a
             className="font-audiowide bg-transparent text-3xl"

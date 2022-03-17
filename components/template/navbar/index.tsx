@@ -28,7 +28,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`navbar fixed z-30 overflow-x-hidden ${state.top <= 0 ? 'bg-transparent' : 'bg-black bg-opacity-10'}`}>
+      className={`navbar fixed z-50 overflow-x-hidden ${state.top <= 0 ? 'bg-transparent' : 'bg-black bg-opacity-10'}`}>
       <div className="hidden md:block max-w-screen-2xl mx-auto px-8 py-2.5">
         <div className="hidden md:flex items-center justify-between gap-x-6 w-full">
           <div
@@ -58,7 +58,7 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
-      <div className="block z-30 md:hidden bg-primary-dark border-t border-gray-400 border-opacity-25">
+      <div className="block md:hidden bg-primary-dark border-t border-gray-400 border-opacity-25">
         <div className="max-w-screen-2xl mx-auto">
           <ul className="flex w-full items-center">
             {

@@ -35,7 +35,7 @@ const About: React.FC = () => {
             </Button>
           </div>
         </div>
-        <div className="w-full md:flex-1 relative h-96">
+        <div className="w-full md:flex-1 relative h-64 md:h-96">
           <div className="w-full absolute top-0 left-0 right-0 bottom-0 image flex justify-center md:justify-items-end">
             <img
               src="/img/about.png"
