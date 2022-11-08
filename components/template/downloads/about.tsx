@@ -35,6 +35,10 @@ export const About = () => {
               Email:
               <b>rizkikhair4658@gmail.com</b>
             </div>
+            <div className="flex items-center gap-x-4 font-poppins">
+              Phone:
+              <b>+62 821 2895 6608</b>
+            </div>
           </div>
         </div>
         <div className="flex-1">

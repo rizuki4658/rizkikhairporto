@@ -47,7 +47,7 @@ export const skills: Skill[] = [
     icon: 'js'
   },
   {
-    name: 'SASS',
+    name: 'SCSS',
     value: 80,
     icon: 'sass'
   },
