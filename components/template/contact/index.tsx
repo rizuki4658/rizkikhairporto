@@ -31,12 +31,7 @@ const Contact = () => {
         </SubTitle>
       </div>
       <p className="md:w-1/4 w-2/3 mt-12 font-poppins text-gray-300 content">
-        Reach me on social media, by filling out the contact form or by sending an email to
-        <Link href={`mailto:${user.email}`}>
-          <a className="text-primary-gradient-hover">
-            &nbsp;rizkikhair4658@.gmail.com
-          </a>
-        </Link>
+        Reach me on social media, by filling out the contact form
       </p>
       <div className="md:w-1/3 w-2/3 mt-16 form">
         <Form onSubmit={onSubmit}>
