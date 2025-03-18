@@ -18,29 +18,6 @@ export const About = () => {
 
       <div
         className="text-base font-montserrat flex items-center">
-        <div className="w-2/3 space-y-4">
-          <div
-            className="text-xs"
-            dangerouslySetInnerHTML={{ __html }} />
-          <div className="text-xs font-poppins">
-            <div className="flex items-center gap-x-4 font-poppins">
-              Name:
-              Rizki Khair
-            </div>
-            <div className="flex items-center gap-x-4 font-poppins">
-              Birth date:
-              13th January, 1995
-            </div>
-            <div className="flex items-center gap-x-4 font-poppins">
-              Email:
-              <b>rizkikhair4658@gmail.com</b>
-            </div>
-            <div className="flex items-center gap-x-4 font-poppins">
-              Phone:
-              <b>+62 821 2895 6608</b>
-            </div>
-          </div>
-        </div>
         <div className="flex-1">
             <img
               src="/img/about.png"
