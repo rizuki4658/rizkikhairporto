@@ -25,17 +25,6 @@ export const Contact = () => {
             </div>
           ))
         }
-        <div className="icon flex items-center space-x-2">
-          <div 
-            style={{
-              WebkitMaskImage: `url('/icons/contact.svg')`
-            }}
-            className="mask-icon w-4 h-4 bg-gray-500"
-          />
-          <span className="text-gray-500">
-            rizkikhair4658@gmail.com
-          </span>
-        </div>
       </div>
     </section>
   )
