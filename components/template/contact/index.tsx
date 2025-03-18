@@ -69,13 +69,6 @@ const Contact = () => {
           </Button>
         </Form>
       </div>
-      <div className="absolute bottom-8 right-10">
-        <Button
-          link="/downloads"
-          customClass="px-10 py-2 rounded-full font-bold h-auto bg-primary-gradient hover:opacity-60">
-          Get CV
-        </Button>
-      </div>
     </section>
   )
 }
