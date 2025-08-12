@@ -1,7 +1,11 @@
 import { user } from '../../../state'
 
 export const Skills = () => {
-  const mySkills = user.skills
+  const mySkills = user.resume?.skills ?? {
+    frontend: [],
+    toolsOthers: [],
+    languages: []
+  }
   return (
     <section className="px-8 mt-4">  
       <div className="flex items-center gap-6">
@@ -10,41 +14,32 @@ export const Skills = () => {
           Skills
         </h1>
       </div>
-      <p className="mt-4 mb-2 text-xs">
-        My experience gives me new skills and takes the skills I already have to the next level.
+      <p className="mt-4 mb-2 text-sm">
+        My professional journey has strengthened my expertise and expanded the skills I already possessed.
       </p>
 
       <div
-        className="text-base text-gray-300 font-montserrat">
-        <div className="w-full md:flex-1">
-          <div className="grid grid-cols-3">
-            {
-              mySkills.map((item: any, key: number) => (
-                <div key={key} className="px-2">
-                  <div className="font-montserrat my-1.5 flex items-start gap-x-4">
-                    <div className="flex-1">
-                      <span className="text-xs text-gray-600">{ item.name }</span>
-                      <div className="bg-gray-800 bg-opacity-10 h-1 rounded">
-                        <div
-                          style={{
-                            width: `${item.value}%`
-                          }}
-                          className="bg-primary-gradient h-full rounded"
-                        />
-                      </div>
-                    </div>
-                    <div className="text-sm icon">
-                      <div 
-                        style={{
-                          WebkitMaskImage: `url('/icons/${item.icon}.svg')`
-                        }}
-                        className="mask-icon w-5 h-5 bg-gray-500"
-                        />
-                    </div>
-                  </div>
-                </div>
-              ))
-            }
+        className="text-base font-montserrat">
+        <div className="w-full md:flex-1 space-y-2">
+          <div className="flex gap-x-2 text-sm">
+            <span>Frontend:</span>
+            <ul className="flex flex-wrap gap-2">
+              {
+                mySkills.frontend.map(item => (
+                  <li className="italic border border-gray-400 px-2 py-0.5 rounded-full">#{item}</li>
+                ))
+              }
+            </ul>
+          </div>
+          <div className="flex gap-x-2 text-sm">
+            <span>Tools & Others:</span>
+            <ul className="flex flex-wrap gap-2">
+              {
+                mySkills.toolsOthers.map(item => (
+                  <li className="italic border border-gray-400 px-2 py-0.5 rounded-full">#{item}</li>
+                ))
+              }
+            </ul>
           </div>
         </div>
       </div>

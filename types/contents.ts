@@ -64,6 +64,24 @@ export interface User {
   skills: Skill[];
   experiences: Experience[];
   socmed: Socmed[];
+  resume: {
+    summary: string;
+    skills: {
+      frontend: string[];
+      toolsOthers: string[];
+      languages: string[];
+    };
+    experiences: {
+      name: string;
+      role: string;
+      body: string;
+      desc: string[];
+    }[];
+    education: {
+      name: string;
+      desc: string;
+    };
+  }
 }
 
 export interface LayoutType {

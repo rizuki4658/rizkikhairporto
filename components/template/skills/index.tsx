@@ -30,15 +30,14 @@ const Skills: React.FC<SkillsType> = ({ ...props }) => {
           <div className="leading-8">
             My experience gives me new skills and takes the skills I already have to the next level.
           </div>
-          <div className="mt-6">
+          <div className="mt-6 flex flex-wrap gap-2">
             {
               mySkills.map((item: Skill, key: number) => (
-                <Progress
-                  key={key}
-                  value={ isActive ? item.value : 0}
-                  name={item.name}
-                  icon={item.icon}
-                  customClass="progress" />
+                <button
+                  className="flex items-center justify-center gap-x-2 border border-white px-4 py-2 rounded-full bg-primary-gradient-hover hover:border-transparent transition-all ease-in-out">
+                  <span>#</span>
+                  {item.name}
+                </button>
               ))
             }
           </div>

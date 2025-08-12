@@ -2,14 +2,14 @@ import { user } from '../../../state'
 import { myDates } from '../../../utils'
 
 export const Experiences = () => {
-  const myExperiences = user.experiences
+  const myExperiences = user.resume.experiences
 
   return (
     <section className="px-8 mt-4">  
       <div className="flex items-center gap-6">
         <div className="bg-primary-gradient h-1 w-6 rounded-md" />
         <h1 className="text-xl font-poppins font-semibold">
-          Experience
+          Experiences & Projects
         </h1>
       </div>
 
@@ -24,13 +24,20 @@ export const Experiences = () => {
                       {item.name}
                     </h3>
                     <p className="font-montserrat my-1 text-xs font-bold">
-                      { item.date.start ? `${myDates(item.date.start).month.long} ${myDates(item.date.start).year.long} ` : 'Present'}
-                      -
-                      { item.date.end ? ` ${myDates(item.date.end).month.long} ${myDates(item.date.end).year.long}` : 'Present' }
+                      {item.role}
+                    </p>
+                    <p className="font-montserrat my-1 text-xs font-bold">
+                      {item.body}
                     </p>
                   </div>
                   <div className="font-poppins mt-2 text-xs">
-                    {item.description}
+                    <ul className="list-outside list-disc ml-4">
+                      {
+                        item.desc.map((itemDesc: string) => (
+                          <li>{itemDesc}</li>
+                        ))
+                      }
+                    </ul>
                   </div>
                 </div>
               )

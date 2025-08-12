@@ -1,5 +1,5 @@
 import { User } from "../types"
-import { works, socmed, experiences, skills, about } from "../constants"
+import { works, socmed, experiences, skills, about, resume } from "../constants"
 
 export const user: User = {
   email: 'rizkikhair4658@gmail.com',
@@ -9,5 +9,6 @@ export const user: User = {
   skills,
   experiences,
   works,
-  socmed
+  socmed,
+  resume
 }
