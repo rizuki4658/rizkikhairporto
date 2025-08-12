@@ -1,4 +1,5 @@
 import { user } from '../../../state'
+import Image from 'next/image'
 
 export const About = () => {
   const __html: string = user.resume.summary ? user.resume.summary : ''
@@ -24,7 +25,7 @@ export const About = () => {
             dangerouslySetInnerHTML={{ __html }} />
         </div>
         <div className="flex-1">
-          <img
+          <Image
             src="/img/about.png"
             alt="about me"
             width="240"

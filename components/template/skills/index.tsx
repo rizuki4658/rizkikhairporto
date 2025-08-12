@@ -6,7 +6,7 @@ import { skills } from '../../../constants'
 import Title from '../title'
 import SubTitle from '../subtitle'
 import Button from '../../common/button'
-import Progress from '../../common/progress'
+import Image from 'next/image'
 
 const Skills: React.FC<SkillsType> = ({ ...props }) => {
   const { asPath } = useRouter()
@@ -34,6 +34,7 @@ const Skills: React.FC<SkillsType> = ({ ...props }) => {
             {
               mySkills.map((item: Skill, key: number) => (
                 <button
+                  key={key}
                   className="flex items-center justify-center gap-x-2 border border-white px-4 py-2 rounded-full bg-primary-gradient-hover hover:border-transparent transition-all ease-in-out">
                   <span>#</span>
                   {item.name}
@@ -50,7 +51,7 @@ const Skills: React.FC<SkillsType> = ({ ...props }) => {
           </div>
         </div>
         <div className="w-full md:flex-1 md:flex items-center justify-center">
-          <img
+          <Image
             src="/img/atom-gray.png"
             width="10"
             height="10"

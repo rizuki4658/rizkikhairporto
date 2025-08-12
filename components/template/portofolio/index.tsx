@@ -5,6 +5,7 @@ import { Works, Work, PortofolioState as State } from '../../../types'
 import Title from '../title'
 import SubTitle from '../subtitle'
 import Button from '../../common/button'
+import Image from 'next/image'
 
 
 const updatingState = (
@@ -97,7 +98,7 @@ const Portofolio: React.FC<Works> = ({...props}: Works) => {
                 <div key={key} className="w-full md:flex-1 relative carousel__image">
                   <div style={{ backgroundImage: `url(/porto/porto-shape-one.webp)`}} className="w-full absolute top-0 bottom-0 right-0 left-0 bg-center bg-no-repeat md:bg-cover bg-contain z-0 opacity-5" />
                   <div className="md:absolute relative z-10 top-0 left-0 right-0 bottom-0 flex items-center justify-center">
-                    <img
+                    <Image
                       alt={`portofolio-${item.name.toLowerCase()}`}
                       src={`/porto/${item.image}`}
                       width="10"

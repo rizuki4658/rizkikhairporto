@@ -4,6 +4,7 @@ import Title from '../title'
 import SubTitle from '../subtitle'
 import Button from '../../common/button'
 import { about } from '../../../constants'
+import Image from 'next/image'
 
 const About: React.FC = () => {
   const { asPath } = useRouter()
@@ -37,7 +38,7 @@ const About: React.FC = () => {
         </div>
         <div className="w-full md:flex-1 relative h-64 md:h-96">
           <div className="w-full absolute top-0 left-0 right-0 bottom-0 image flex justify-center md:justify-items-end">
-            <img
+            <Image
               src="/img/about.png"
               alt="about me"
               width="10"

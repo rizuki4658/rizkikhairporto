@@ -25,8 +25,8 @@ export const Skills = () => {
             <span>Frontend:</span>
             <ul className="flex flex-wrap gap-2">
               {
-                mySkills.frontend.map(item => (
-                  <li className="italic border border-gray-400 px-2 py-0.5 rounded-full">#{item}</li>
+                mySkills.frontend.map((item, key) => (
+                  <li key={key} className="italic border border-gray-400 px-2 py-0.5 rounded-full">#{item}</li>
                 ))
               }
             </ul>
@@ -35,8 +35,8 @@ export const Skills = () => {
             <span>Tools & Others:</span>
             <ul className="flex flex-wrap gap-2">
               {
-                mySkills.toolsOthers.map(item => (
-                  <li className="italic border border-gray-400 px-2 py-0.5 rounded-full">#{item}</li>
+                mySkills.toolsOthers.map((item, key) => (
+                  <li key={key} className="italic border border-gray-400 px-2 py-0.5 rounded-full">#{item}</li>
                 ))
               }
             </ul>
