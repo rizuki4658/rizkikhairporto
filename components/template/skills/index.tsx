@@ -34,6 +34,7 @@ const Skills: React.FC<SkillsType> = ({ ...props }) => {
             {
               mySkills.map((item: Skill, key: number) => (
                 <button
+                  key={key}
                   className="flex items-center justify-center gap-x-2 border border-white px-4 py-2 rounded-full bg-primary-gradient-hover hover:border-transparent transition-all ease-in-out">
                   <span>#</span>
                   {item.name}

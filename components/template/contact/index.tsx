@@ -26,12 +26,12 @@ const Contact = () => {
         </Title>
         <SubTitle>
           <div className="font-poppins md:w-1/2 w-4/5">
-            Interested in working with me or maybe just talk?
+            Open to conversations — feel free to reach out.
           </div> 
         </SubTitle>
       </div>
       <p className="md:w-1/4 w-2/3 mt-12 font-poppins text-gray-300 content">
-        Reach me on social media, by filling out the contact form
+        Find me on social media, or just drop a message via the contact form.
       </p>
       <div className="md:w-1/3 w-2/3 mt-16 form">
         <Form onSubmit={onSubmit}>

@@ -33,8 +33,8 @@ export const Experiences = () => {
                   <div className="font-poppins mt-2 text-xs">
                     <ul className="list-outside list-disc ml-4">
                       {
-                        item.desc.map((itemDesc: string) => (
-                          <li>{itemDesc}</li>
+                        item.desc.map((itemDesc: string, key: number) => (
+                          <li key={key}>{itemDesc}</li>
                         ))
                       }
                     </ul>
