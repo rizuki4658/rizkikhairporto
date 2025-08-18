@@ -139,18 +139,6 @@ export const works: Work[] = [
     description: 'Popaket is digital logistics platform that makes it easy for you to send packets with a variety of options courier / cargo. Popaket has partnered with 15+ professional couriers in Indonesia. Our service include Intant, Same Day, Express, Regular, and Cargo delivery.'
   },
   {
-    name: 'Sellshark',
-    image: 'sellshark.png',
-    link: 'https://sellshark.com',
-    description: 'Sellshark is a digital platform that makes it easy for you to sell electronic goods such as smartphones, laptops, monitors, and much more. They are more ready for an apple product. But they are accepted too from another brand but not much.<br/>Sellshark is a platform under ItechShark and there are several companies affiliated with ItechShark including <a href="https://buybackengineer.com/" target="_blank" class="text-primary-gradient-hover">Buyback Engineer</a>, <a href="https://sell.gettech.com/" target="_blank" class="text-primary-gradient-hover">Gettech</a>, <a href="https://buybackpros.com/" target="_blank" class="text-primary-gradient-hover">Buyback Pros</a>, and many more. All affiliated companies have the same website or platform like a SellShark with only slight differences in content.'
-  },
-  {
-    name: 'SIKS',
-    image: 'siks.png',
-    link: 'https://siks.anri.sangkuriang.co.id/',
-    description: 'SIKS is plaform from KOMINFO, one of the Indonesian ministries. this platform was created for ANRI in carrying out its duties in the field of archives. The Archived will be digitized so that it is safer and avoids damage due to aging.'
-  },
-  {
     name: 'Global Trade-in & Buy-back SaaS Platform',
     image: 'reusely.png',
     link: 'https://reusely.com',
@@ -196,15 +184,6 @@ export const resume = {
       desc: [
         'Built booking widget and service scheduling module with Vue.js & Element UI.','Collaborated with design team to enhance UX and customer retention.',
         'Maintained codebase and improved booking speed by 25%.'
-      ]
-    },
-    {
-      name: 'SIKS',
-      role: 'Front-End Developer',
-      body: 'Digital archiving platform for KOMINFO & ANRI',
-      desc: [
-        'Developed core UI using Vue.js, Vuetify, and Vuex.',
-        'Integrated API for secure document digitization and management.'
       ]
     }
   ],

@@ -52,7 +52,8 @@ const MyButton = (props: any) => {
   return (
     <button
       type={props.type ? props.type : 'button'}
-      className="bg-primary-gradient-hover hover:text-white text-gray-300 py-2.5 px-6 font-poppins rounded-lg border border-black border-opacity-10 block md:inline-block text-center font-semibold">
+      disabled={props.disabled}
+      className={`bg-primary-gradient-hover hover:text-white text-gray-300 py-2.5 px-6 font-poppins rounded-lg border border-black border-opacity-10 block md:inline-block text-center font-semibold ${props.disabled ? 'opacity-50 cursor-not-allowed' : ''}`}>
       {props.children}
     </button>
   )

@@ -35,8 +35,8 @@ const Portofolio: React.FC<Works> = ({...props}: Works) => {
   const isActive = asPath.includes('portofolio') ? true : false
 
   const [porto, setPorto] = useState({
-    start: 5,
-    selected: 4,
+    start: 3,
+    selected: 2,
     limit: props.works.length,
     isActive: false
   })
