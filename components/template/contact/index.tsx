@@ -17,6 +17,7 @@ const Contact = () => {
   const isActive = asPath.includes('contact')
   const [notice, setNotice] = useState<Notice>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [formKey, setFormKey] = useState(0)
   const timerRef = useRef<NodeJS.Timeout | null>(null)
 
   // auto-hide message
@@ -44,7 +45,7 @@ const Contact = () => {
       if (res.ok) {
         setNotice({ type: 'success', text: 'Message sent successfully!' })
         // reset form
-        document.querySelector<HTMLFormElement>('#contact-form')?.reset()
+        setFormKey(k => k + 1)
       } else {
         setNotice({
           type: 'error',
@@ -90,7 +91,7 @@ const Contact = () => {
             {notice.text}
           </div>
         )}
-        <Form id="contact-form" onSubmit={onSubmit}>
+        <Form key={formKey} id="contact-form" onSubmit={onSubmit}>
           <Input
             {...{
               name: 'name',
